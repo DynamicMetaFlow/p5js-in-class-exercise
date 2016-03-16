@@ -1,11 +1,15 @@
+//You should declare any variables here
 
-/* RUNS ONCE AT BEGINNING*/
+
+//This function is run ONCE at the beginning
 function setup() {
 
 }
 
 
-/* RUNS CONTINUOUSLY (LOOPING) */
+//This function is run CONTINUOUSLY in a loop
 function draw() {
 
 }
+
+//I usually declare functions here
