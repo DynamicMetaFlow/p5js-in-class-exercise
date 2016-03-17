@@ -81,7 +81,7 @@ Since width and height are the same we get not just an ellipse but a circle. I h
 
 This ellipse is being drawn on a canvas. We can see the size of the canvas if we change the background color in our sketch.
 
-Add the following statement inside the `setup()` function:
+**Add the following statement inside the `setup()` function:**
 
 ```javascript
 background(200);
@@ -89,7 +89,7 @@ background(200);
 
 You should see a grey box behind our circle now. Its pretty small. Lets make it bigger. The value '200' sets the brightness of the grey on a scale from 0 (black) to 255 (white). Read more about `background()` and how to change its color [here](http://p5js.org/reference/#/p5/background)
 
-Right before the `background(200);` statement add the following statement:
+**Right before the `background(200);` statement add the following statement:**
 
 ```
 createCanvas(640, 480);
@@ -137,8 +137,8 @@ function draw() {
 
 Lets create a variable to hold the diameter of the circle. We will want to do this in several steps.
 
-1. Declare a new variable
-2. Assign a value
+1. Declare a new variable.
+2. Assign a value.
 3. Use it.
 
 #### 1. Declare a new variable
@@ -148,19 +148,19 @@ Lets create a variable to hold the diameter of the circle. We will want to do th
 var diameter;
 ```
 
-There is a good reason to declare variables outside any function that we will go into later. 
+There is a good reason to declare variables outside any function that we will go into more when we talk about functions. 
 
 #### 2. Assign a new value
-** Add the following statement inside the `setup()` function
+**Add the following statement inside the `setup()` function**
 
 ```javascript
 diameter = 50;
 ```
 
-We will set the initial value of the diameter inside the `setup()` function but later on we might change it elsewhere.
+We will set the initial value of `diameter` inside the `setup()` function but later on we might change it elsewhere.
 
 #### 3. Use it
-** Replace the width and height values which are now set to `60` with the new variable `diameter` like this:**
+**Replace the width and height values which are now set to `60` with the new variable `diameter` like this:**
 
 ```javascript
 ellipse(50, 50, diameter, diameter);
@@ -210,7 +210,7 @@ In our case using `width` is the same as writing `if( xPosition > 640 )`. `width
 
 Its a little weird right now that circle just jumps from one side to another. It might be nicer if it acted more like a ball and when it reached the edge it reversed direction as if bouncing off a wall. To do that we will create another variable.
 
-** In the same manner that we created variables before create a new variable called `xVelocity` and assign it the value `1`. **
+**In the same manner that we created variables before create a new variable called `xVelocity` and assign it the value `1`. **
 
 We are going to use this new varible `xVelocity` to replace the `1` in the statement where we increment the xPosition like this.
 
@@ -218,11 +218,13 @@ We are going to use this new varible `xVelocity` to replace the `1` in the state
 xPosition = xPosition + xVelocity;
 ```
 
-You can see why we called this velocity if you increase its value from one to something higher. If we want to reverse directions we can assign `xVelocity` a negative value.
+You can see why we called this velocity if you increase its value from one to something higher.
 
-Lets use this new variable to make the ball change directions at the edge. 
+**Try a few different values for `xVelocity`. Try a negative number. What happens?**
 
-**Change `xPosition = 0;` to `xVelocity = -xVelocity;`. This says set xVelocity to negative of its current value. If its current value is '1' it will change it to '-1'.**
+Let's use this new variable to make the ball change directions at the edge. 
+
+**Change `xPosition = 0;` to `xVelocity = -xVelocity;`. This says set xVelocity to the negative of its current value. If its current value is '1' it will change it to '-1'.**
 
 What happens? It should work fine when we get to the right edge but after it turns around it will end up running off the left edge now. 
 
@@ -230,9 +232,9 @@ What happens? It should work fine when we get to the right edge but after it tur
 
 Because the left edge is zero this should work. The statement inside the second if statement should be identical to the first. `xVelocity = -xVelocity` because if the velocity is `-1` then `--1` equals `1`.
 
-Whenever you repeat code like this in a program you should try and see if it is really necessary to have to copies of the same code. Redunancy in a program usually means there is room for simplification.
+Whenever you repeat code like this in a program you should try and see if it is really necessary to have two copies of the same code. Redunancy in a program usually means there is room for simplification.
 
-In our case, since we want to set `xVelocity` to its negative whether it is less than zero **OR** greater than the width of the canvas, we can combine our to if statements.
+In our case, since we want to set `xVelocity` to its negative whether it is less than zero **OR** greater than the width of the canvas, we can combine our two if statements.
 
 **Replace the two if statements with the following**
 
@@ -245,18 +247,18 @@ The to verticle slashes `||` inside the if statement stand for **"or"**. So the 
 
 >"If `xPosition` is less than zero **OR** `xPosition` is greater than the width, change the direction of `xVelocity`."
 
-That reduced six lines of code with three. Not bad.
+That reduced six lines of code to three. Not bad.
 
-Now that you have xVelocity working see if you can make yPosition do the same thing. 
+Now that you have circle moving in the x direction (horizontally) see if you can write the code to make it work in the y direction (vertically).
 
 **Add code for `yPosition` that mimics the behavior we have created for `xPosition`.**
 
-If you copy the code for `xPosition` and replace `xPosition` with `yPosition` and `width` with `height` you should be able to  complete this part. You will also need to create a variable `yVelocity`.
+If you copy the code for `xPosition` and replace `xPosition` with `yPosition` and `width` with `height` you should be able to complete this part. You will also need to create a variable `yVelocity`.
 
 #### Bonus
 
-**Right now the circle actually extends off the edge a little before bouncing off. Can you make it bounce when the edge of the circle reaches the edge of the canvas?**
+**Use the `stroke()` and `fill()` functions to change the color of the circle. Can you change the color while its moving? When it hits an edge?**
 
 **Look up the function `random()` in the p5.js [reference](http://p5js.org/reference/) and see if you can set the initial values of `xVelocity` and `yVelocity` to a random number between 1 and 10.**
 
-**Use the `stroke()` and `fill()` functions to change the color of the circle. Can you change the color while its moving? When it hits an edge?**
+**Right now the circle actually extends off the edge a little before bouncing off. Can you make it bounce when the edge of the circle reaches the edge of the canvas?**
