@@ -2,9 +2,16 @@
 
 ## Overview
 
-This exercises users the JavaScript library p5.js to learn about the basics of programming. p5.js is a decendant of Processing. A JavaScript framework that is designed to be easy to to use for non-programmers and designers. p5.js extends Processings core features into Javascript.
+This exercise uses the JavaScript library p5.js to learn about the basics of programming. p5.js is a decendant of Processing. A JavaScript framework that is designed to be easy to to use for non-programmers and designers. p5.js extends Processings core features into Javascript.
 
-## Files included
+**We will cover the following:**
+
+* p5.js basic setup
+* Statments
+* Variables
+* Conditions
+
+## p5.js basic setup
 
 This exercise includes the p5.js library and index.html and empty sketch file in whic we will write our code. 
 
@@ -15,8 +22,6 @@ There are two `<script>` tags near the bottom of the `<body>` tag. The first lin
 **Open `index.html` in a Browser or use *Live Preview* in Brackets.**
 
 You will probably need the JavaScript console at some point to see if something when wrong. This will break the connection to *Live Preview*. You can still see changes by saving in Brackets and reloading the file in Chrome.
-
-## Sketch file
 
 In p5.js like Processing. The main file you use to write your code is called a sketch. 
 
