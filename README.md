@@ -2,10 +2,15 @@
 
 ## Overview
 
-Before we dive into p5.js. Lets take a look at the `index.html` file. This should look quite similar to other HTML files we have worked with. 
-There are two `<script>` tags near the bottom of the `<body>` tag. The first links our document to the p5.js library. 
+This exercises users the JavaScript library p5.js to learn about the basics of programming. p5.js is a decendant of Processing. A JavaScript framework that is designed to be easy to to use for non-programmers and designers. p5.js extends Processings core features into Javascript.
 
-The second links to the `sketch.js` file. This file is where we will put our code. We will use the variables and functions in the p5.js library in our `sketch.js` file.
+## Files included
+
+This exercise includes the p5.js library and index.html and empty sketch file in whic we will write our code. 
+
+Before we dive in, let's take a look at the `index.html` file. This should look quite similar to other HTML files we have worked with. 
+
+There are two `<script>` tags near the bottom of the `<body>` tag. The first links our document to the p5.js library allowing us to use it. The second links to the `sketch.js` file. This file is where we will put our code. We will use the variables and functions in the p5.js library in our `sketch.js` file.
 
 **Open `index.html` in a Browser or use *Live Preview* in Brackets.**
 
