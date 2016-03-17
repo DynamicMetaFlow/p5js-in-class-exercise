@@ -16,7 +16,11 @@ There are two `<script>` tags near the bottom of the `<body>` tag. The first lin
 
 You will probably need the JavaScript console at some point to see if something when wrong. This will break the connection to *Live Preview*. You can still see changes by saving in Brackets and reloading the file in Chrome.
 
-Now lets move on to `sketch.js`. This is what it should look like.
+## Sketch file
+
+In p5.js like Processing. The main file you use to write your code is called a sketch. 
+
+Our sketch is called `sketch.js`. This is what it should look like.
 
 #### sketch.js
 ```javascript
