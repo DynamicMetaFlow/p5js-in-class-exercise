@@ -13,7 +13,7 @@ This exercise uses the JavaScript library p5.js to learn about the basics of pro
 
 ## p5.js basic setup
 
-This exercise includes the p5.js library and index.html and empty sketch file in whic we will write our code. 
+This exercise includes the p5.js library and index.html and empty sketch file in which we will write our code. 
 
 Before we dive in, let's take a look at the `index.html` file. This should look quite similar to other HTML files we have worked with. 
 
