@@ -96,7 +96,7 @@ You should see a grey box behind our circle now. Its pretty small. Lets make it 
 
 **Right before the `background(200);` statement add the following statement:**
 
-```
+```javascript
 createCanvas(640, 480);
 ```
 
